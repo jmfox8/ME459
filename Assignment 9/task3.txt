@@ -1,0 +1,13 @@
+task3.c: In function ‘test1’:
+task3.c:10:21: warning: variable ‘sink’ set but not used [-Wunused-but-set-variable]
+   10 |     volatile double sink;
+      |                     ^~~~
+task3.c: In function ‘main’:
+task3.c:133:22: warning: ‘time2avg’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  133 |             time2avg += elapsed_msec_2;
+      |             ~~~~~~~~~^~~~~~~~~~~~~~~~~
+task3.c:47:22: warning: ‘time1avg’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   47 |             time1avg += elapsed_msec_1;
+      |             ~~~~~~~~~^~~~~~~~~~~~~~~~~
+0.076545 0.039091 0.019949 0.016517 0.013528 0.010420 0.009009 
+0.076232 0.038846 0.019766 0.016425 0.013465 0.010323 0.009035 
