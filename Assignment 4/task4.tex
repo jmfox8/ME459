@@ -1,0 +1,32 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+%SetFonts
+
+%SetFonts
+
+
+\title{Assignment 4}
+\author{Jackson Fox}
+\date{Due 10/14/2021}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+\section*{Problem 4}
+\subsection*{a)}
+The fastest language by far was C.  I believe that the main reason for this is because c is a compiled language whereas the other three (MATLAB, R and Python)  are interpreted.  Not only is there the standard increase in time due to the run time translation to machine code, but with the code in question (lots of iterations through for loops) each time a loop is repeated it must be fully translated and executed in the interpreted languages.  C has the advantage of already compiling the entire process, so while the loops still need to be iterated, they are purely being executed not translated and then executed repeatedly.
+
+\subsection*{b)}
+It took me longer to write the code for C than it did for R, the solution that I chose.  Given familiarity with both coding languages, I believe it would still take me longer to code in c given the complexity of allocating memory and defining the variables required when compared to R, which required relatively little setup or specification of definitions, variables, etc.
+
+\subsection*{c)}
+I would likely choose c.  Though the initial coding will take more time, it was so much faster in actually executing the program that if I needed to increase the size of the matrices (and therefore increase iterations) or had to mess with my solution and approach waiting the up to 70 seconds that was required for R  would begin to have a noticeable impact on my efficiency and patience.  Additionally, I noticed when running tests on my local machine that the performance of my PC was impacted when running the R code in a way that it was not when executing the c code, which I am sure would only increase as the number of iterations increase.
+
+\end{document}  
+exi

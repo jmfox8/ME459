@@ -1,0 +1,32 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+%SetFonts
+
+%SetFonts
+
+
+\title{ME 459 - Homework 2}
+\author{Jackson Fox}
+\date{Due 9/30/2021}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+\section*{Problem 1}
+	\subsection*{a.} The SLURM\_SUBMIT\_DIR is the directory from which the currently running sbatch script was submitted
+	\subsection*{b.} The Slurm job begins execution in the directory from which the job was submitted, in this case the home directory for my account
+	\subsection*{c.} SLURM\_JOB\_ID is the ID of the specific job allocation
+	\subsection*{d.} It specifies a job array to run simultaneously, in this case jobs 1 through 9.
+	\subsection*{e.} SLURM\_ARRAY\_TASK\_ID specifies the ID of the job array that was defined with the header \#SBATCH $-$$-$array=0-9
+	\subsection*{f.} The header declares that the standard output of the slurm job should be directed to the following "-o", in this case joboutput.out, and that the standard error information of the slurm job should be directed to the file following "-e", in this case joboutput.err
+
+\section*{Problems 2 - 4}
+Scripts submitted electronically.
+
+\end{document}  

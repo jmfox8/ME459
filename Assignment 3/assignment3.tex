@@ -1,0 +1,67 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+%SetFonts
+
+%SetFonts
+
+
+\title{ME 459 Assignment 3}
+\author{Jackson Fox}
+\date{Due 10/7/2021}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+\section*{Problem 1}
+
+The \#include is always used to indicate header files, the difference is system header files vs. user header files.  When < ... > is used, it is referring to system header files.  The compiling system searches through a set of standard directories for the .h file within the < ... >.  When " ... " is used, the system looks for the .h file in the " ... " within the directory containing the current file (file being pre-processed and compiled).
+
+\section*{Problem 2}
+
+	\subsection*{a)}
+	
+		1 - Static integer array
+		\newline
+		2 - int array[10]
+		\newline
+		3 - This memory is only allocated in the stack for the period of time that the function that calls it exists, so once the function is completed, the 	memory will be free
+	
+	\subsection*{b)}
+		1 - A dynamic memory allocation via malloc
+		\newline
+		2 - int argin = atoi(argv[1]);
+	
+		float *solutionArray = (float*)malloc(sizeof(float) * argin);
+		\newline
+		3 - free(solutionArray);
+	\subsection*{c)}
+		1 - A dynamic memory allocation via malloc
+		\newline
+		2 - char *pArray = (char*)malloc(sizeof(char) * 50);
+		\newline
+		3 - free(pArray);
+
+\section*{Problem 3}
+Coding solutions included in submission.
+\newline
+\newline
+The reason that the size of the two structs is different is because each structure must take up some multiple of 8 bytes of memory, and will add filler bytes to make sure that there is alignment across the different components. 
+\newline
+\newline
+In the A struct, there is a 4 byte int followed by a 1 byte char, then an 8 byte double.  In order to get that to 16 total bytes, the system adds 3 filler bytes after the 1 byte char, creating two equal 8 byte chunks.  The overall package then has two sections of 8 bytes - one with the int, char and 3 filler and one with the 8 byte double, for a total of 16 bytes.
+\newline
+\newline
+In the B struct, there is a 4 byte int, followed by an 8 byte double, then the 1 byte char.  Because the 8 byte double has to be contained ints own 8 byte chunk, the system has to add filler after the 4 byte int, and then again after the 1 byte char.  This results in the package having three 8 byte packages - one with the 4 byte int and 4 filler bytes, one with the 8 byte double, and the final one holding the one byte char and 7 bytes of filler, bringing the total to 24 bytes.
+
+
+\section*{Problem 4}
+Coding solutions included in submission.
+
+
+\end{document}  
